@@ -23,7 +23,7 @@
 </head>
 <body>
   <div class="terminal-container">
-    <div class="terminal-header">
+    <div class="terminal-header" aria-hidden="true">
       <div class="terminal-controls">
         <span class="control close"></span>
         <span class="control minimize"></span>
@@ -183,18 +183,18 @@
                   <label class="role-option"><input type="checkbox" name="roles" value="speak"><span><i class="fas fa-microphone"></i> Speaking</span></label>
                   <label class="role-option"><input type="checkbox" name="roles" value="workshop"><span><i class="fas fa-flask"></i> Workshop / Village</span></label>
                 </div>
-                <p class="field-error" id="roles-error" hidden>Pick at least one.</p>
+                <p class="field-error" id="roles-error" role="alert" hidden>Pick at least one.</p>
               </fieldset>
 
               <fieldset>
                 <legend><span class="prompt">&gt;</span> About you</legend>
                 <div class="field-row">
-                  <label>Name <span class="req">*</span><input type="text" name="name" required autocomplete="name" maxlength="200"></label>
-                  <label>Email <span class="req">*</span><input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+                  <div class="field"><label>Name <span class="req">*</span><input type="text" name="name" required autocomplete="name" maxlength="200"></label></div>
+                  <div class="field"><label>Email <span class="req">*</span><input type="email" name="email" required autocomplete="email" maxlength="200"></label></div>
                 </div>
                 <div class="field-row">
-                  <label>Organization / School <input type="text" name="organization" autocomplete="organization" maxlength="200"></label>
-                  <label>Handle (optional) <input type="text" name="handle" maxlength="100"></label>
+                  <div class="field"><label>Organization / School <input type="text" name="organization" autocomplete="organization" maxlength="200"></label></div>
+                  <div class="field"><label>Handle (optional) <input type="text" name="handle" maxlength="100"></label></div>
                 </div>
               </fieldset>
 
@@ -202,7 +202,7 @@
               <fieldset class="role-section" data-role="attend" hidden disabled>
                 <legend><span class="prompt">&gt;</span> Attending</legend>
                 <div class="field-row">
-                  <label>I'd describe myself as
+                  <div class="field"><label>I'd describe myself as
                     <select name="attend_type">
                       <option value="">Choose one</option>
                       <option>Student</option>
@@ -211,10 +211,10 @@
                       <option>Hobbyist / Curious</option>
                       <option>Other</option>
                     </select>
-                  </label>
-                  <label>Group size (incl. you)
+                  </label></div>
+                  <div class="field"><label>Group size (incl. you)
                     <input type="number" name="attend_group_size" min="1" max="50" value="1">
-                  </label>
+                  </label></div>
                 </div>
                 <label class="check"><input type="checkbox" name="attend_volunteer" value="yes"> I'd be interested in volunteering</label>
               </fieldset>
@@ -223,11 +223,11 @@
               <fieldset class="role-section" data-role="sponsor" hidden disabled>
                 <legend><span class="prompt">&gt;</span> Sponsoring</legend>
                 <div class="field-row">
-                  <label>Company <span class="req">*</span><input type="text" name="sponsor_company" required maxlength="200"></label>
-                  <label>Website <input type="url" name="sponsor_website" placeholder="https://" maxlength="300"></label>
+                  <div class="field"><label>Company <span class="req">*</span><input type="text" name="sponsor_company" required maxlength="200"></label></div>
+                  <div class="field"><label>Website <input type="url" name="sponsor_website" placeholder="https://" maxlength="300"></label></div>
                 </div>
                 <div class="field-row">
-                  <label>Level of interest
+                  <div class="field"><label>Level of interest
                     <select name="sponsor_tier">
                       <option value="">Not sure yet</option>
                       <option>Community</option>
@@ -236,8 +236,8 @@
                       <option>Gold</option>
                       <option>Donated goods or services (venue, food, swag, etc.)</option>
                     </select>
-                  </label>
-                  <label>Phone (optional) <input type="tel" name="sponsor_phone" autocomplete="tel" maxlength="40"></label>
+                  </label></div>
+                  <div class="field"><label>Phone (optional) <input type="tel" name="sponsor_phone" autocomplete="tel" maxlength="40"></label></div>
                 </div>
               </fieldset>
 
@@ -245,27 +245,27 @@
               <fieldset class="role-section" data-role="speak" hidden disabled>
                 <legend><span class="prompt">&gt;</span> Speaking</legend>
                 <div class="field-row">
-                  <label>Talk title <span class="req">*</span><input type="text" name="speak_title" required maxlength="200"></label>
-                  <label>Format
+                  <div class="field"><label>Talk title <span class="req">*</span><input type="text" name="speak_title" required maxlength="200"></label></div>
+                  <div class="field"><label>Format
                     <select name="speak_length">
                       <option>Full talk (~45 min)</option>
                       <option>Short talk (~20 min)</option>
                       <option>Lightning talk (5 min)</option>
                     </select>
-                  </label>
+                  </label></div>
                 </div>
                 <label>Abstract <span class="req">*</span>
                   <textarea name="speak_abstract" rows="5" required maxlength="3000" placeholder="What will attendees learn?"></textarea>
                 </label>
                 <div class="field-row">
-                  <label>Audience level
+                  <div class="field"><label>Audience level
                     <select name="speak_level">
                       <option>Beginner</option>
                       <option>Intermediate</option>
                       <option>Advanced</option>
                     </select>
-                  </label>
-                  <label>Previous talks / links (optional) <input type="text" name="speak_links" maxlength="500"></label>
+                  </label></div>
+                  <div class="field"><label>Previous talks / links (optional) <input type="text" name="speak_links" maxlength="500"></label></div>
                 </div>
                 <label class="check"><input type="checkbox" name="speak_first_time" value="yes"> This would be my first talk</label>
               </fieldset>
@@ -274,27 +274,27 @@
               <fieldset class="role-section" data-role="workshop" hidden disabled>
                 <legend><span class="prompt">&gt;</span> Workshop / Village</legend>
                 <div class="field-row">
-                  <label>Type
+                  <div class="field"><label>Type
                     <select name="workshop_type">
                       <option>Workshop</option>
                       <option>Village</option>
                     </select>
-                  </label>
-                  <label>Name / Title <span class="req">*</span><input type="text" name="workshop_title" required maxlength="200"></label>
+                  </label></div>
+                  <div class="field"><label>Name / Title <span class="req">*</span><input type="text" name="workshop_title" required maxlength="200"></label></div>
                 </div>
                 <label>Description <span class="req">*</span>
                   <textarea name="workshop_description" rows="4" required maxlength="3000"></textarea>
                 </label>
                 <div class="field-row">
-                  <label>Expected capacity (people) <input type="number" name="workshop_capacity" min="1" max="1000"></label>
-                  <label>Duration
+                  <div class="field"><label>Expected capacity (people) <input type="number" name="workshop_capacity" min="1" max="1000"></label></div>
+                  <div class="field"><label>Duration
                     <select name="workshop_duration">
                       <option>1 hour</option>
                       <option>2 hours</option>
                       <option>Half day</option>
                       <option>Full day</option>
                     </select>
-                  </label>
+                  </label></div>
                 </div>
                 <label>Space / power / network needs
                   <input type="text" name="workshop_needs" maxlength="500" placeholder="e.g. 6 tables, power strips, isolated network">

@@ -1,16 +1,32 @@
 # Sacramento Cyber Con — website (proof of concept)
 
-A static site for GitHub Pages with a sign-up form that writes to a Google Sheet via Google Apps Script. Styling matches [dc916.com](https://dc916.com).
+A static site for GitHub Pages with a sign-up form that writes to a Google Sheet via Google Apps Script. It comes in two designs:
+
+- `/` (the main page): the hacker/terminal look, matching [dc916.com](https://dc916.com).
+- `/pro/`: a clean, professional design in the same DC916 colors.
+
+Both designs share `config.js` and `assets/js/main.js`, so they post the same fields to the same Sheet. A fix to the form logic applies to both.
 
 ```
-index.html              the whole site (hero, about, get involved, sponsors, sign-up, FAQ)
+index.html              main design (hero, about, get involved, sponsors, sign-up, FAQ)
+pro/index.html          professional design, same content and form
+pro/pro.css
 config.js               ← paste your Apps Script URL + event date here
 assets/css/style.css
-assets/js/main.js       form logic, countdown, typing effect
+assets/js/main.js       shared: form logic + inline validation, countdown, typing effect
 assets/images/          DC916 logo art
 apps-script/Code.gs     ← paste into the Google Sheet's Apps Script editor
 .nojekyll               tells GitHub Pages to serve files as-is
 ```
+
+## Accessibility
+
+The `/pro/` design was built and tested against WCAG 2.2 AA (the standard used for ADA compliance): an automated axe-core scan with zero violations, manual contrast checks for every color pairing including the gradient banner, keyboard-only use, and reflow at 320px width. When editing `/pro/`:
+
+- Re-check contrast if you change a color (4.5:1 for text, 3:1 for input borders and focus rings). The palette and the reasoning are at the top of `pro/pro.css`.
+- Give decorative icons `aria-hidden="true"`.
+- Every form field needs a visible `<label for>`. Mark required fields with the word "(required)", not just a symbol.
+- Before launch, try the page with a screen reader (VoiceOver on Mac: Cmd+F5) and with the keyboard alone.
 
 ## Run locally
 

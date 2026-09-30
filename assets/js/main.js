@@ -84,7 +84,7 @@
       roleBoxes[0].focus();
       return;
     }
-    if (!form.reportValidity()) return;
+    if (!validateFields()) return;
 
     var fd = new FormData(form);
     var payload = { roles: fd.getAll('roles'), elapsed_ms: Date.now() - loadedAt };
@@ -107,6 +107,65 @@
         setStatus('✖ Something went wrong sending your submission. Please try again, or reach us on Discord.', 'err');
       })
       .finally(function () { submitBtn.disabled = false; });
+  });
+
+  // Inline, screen-reader-friendly validation: each invalid field gets
+  // aria-invalid plus a visible message linked via aria-describedby, and focus
+  // moves to the first problem. Used instead of the browser's popup bubbles.
+  function validateFields() {
+    var firstInvalid = null;
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.willValidate || el.name === 'website_url') return;
+      clearError(el);
+      if (!el.checkValidity()) {
+        showError(el, el.validationMessage);
+        if (!firstInvalid) firstInvalid = el;
+      }
+    });
+    if (firstInvalid) {
+      setStatus('Please fix the highlighted fields and try again.', 'err');
+      firstInvalid.focus();
+      return false;
+    }
+    return true;
+  }
+
+  function errorAnchor(el) {
+    var box = el.closest('.field, .check');
+    if (box) return box;
+    return el.parentElement.tagName === 'LABEL' ? el.parentElement : el;
+  }
+
+  function showError(el, message) {
+    var id = (el.id || el.name) + '-error';
+    var msg = document.getElementById(id);
+    if (!msg) {
+      msg = document.createElement('p');
+      msg.id = id;
+      msg.className = 'field-error';
+      errorAnchor(el).after(msg);
+    }
+    msg.textContent = message;
+    msg.hidden = false;
+    el.setAttribute('aria-invalid', 'true');
+    el.classList.add('invalid');
+    var described = (el.getAttribute('aria-describedby') || '').split(' ').filter(Boolean);
+    if (described.indexOf(id) === -1) described.push(id);
+    el.setAttribute('aria-describedby', described.join(' '));
+  }
+
+  function clearError(el) {
+    var msg = document.getElementById((el.id || el.name) + '-error');
+    if (msg) msg.hidden = true;
+    el.removeAttribute('aria-invalid');
+    el.classList.remove('invalid');
+  }
+
+  form.addEventListener('input', function (e) {
+    if (e.target.getAttribute('aria-invalid') === 'true' && e.target.checkValidity()) clearError(e.target);
+  });
+  form.addEventListener('change', function (e) {
+    if (e.target.getAttribute('aria-invalid') === 'true' && e.target.checkValidity()) clearError(e.target);
   });
 
   function send(payload) {

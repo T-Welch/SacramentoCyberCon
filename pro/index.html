@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Same policy as the main site. GitHub Pages can't set headers, so it's delivered via meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src https://script.google.com https://script.googleusercontent.com; form-action 'none'; base-uri 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Sacramento Cyber Con</title>
+  <meta name="description" content="Sacramento Cyber Con: a grassroots cybersecurity conference in Sacramento, CA, organized by members of DC916 / Cybersecurity Sacramento.">
+  <meta property="og:title" content="Sacramento Cyber Con">
+  <meta property="og:description" content="A grassroots cybersecurity conference in Sacramento, CA. Attend, sponsor, speak, or run a workshop or village.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%235B2B82'/><text x='16' y='21' text-anchor='middle' font-family='sans-serif' font-size='11' font-weight='bold' fill='%23ffffff'>SCC</text></svg>">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#main"><span class="mark" aria-hidden="true">SCC</span><span>Sacramento Cyber Con</span></a>
+      <nav class="links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#involved">Get Involved</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-sm" href="#signup">Register Interest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Sacramento, California</p>
+          <h1 id="hero-title">Sacramento Cyber Con</h1>
+          <p class="lede">A grassroots cybersecurity conference for the greater Sacramento area, organized by members of DC916 / Cybersecurity Sacramento.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#signup">Register interest</a>
+            <a class="btn btn-ghost" href="#sponsors">Become a sponsor</a>
+          </div>
+        </div>
+        <dl class="hero-card">
+          <div class="fact"><dt><i class="far fa-calendar" aria-hidden="true"></i>Date</dt><dd id="event-date">To be announced</dd></div>
+          <div class="fact"><dt><i class="fas fa-location-dot" aria-hidden="true"></i>Venue</dt><dd>Sacramento, CA</dd></div>
+          <div class="fact"><dt><i class="fas fa-users" aria-hidden="true"></i>Hosted by</dt><dd>DC916 / Cybersecurity Sacramento</dd></div>
+        </dl>
+        <p id="countdown-line" class="countdown" hidden><span class="visually-hidden">Time until the event: </span><span id="countdown"></span></p>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="kicker">About the conference</p>
+        <h2 id="about-title">Built by the local security community</h2>
+        <p class="section-lede">Whether you're a student writing your first exploit, a blue teamer defending state infrastructure, or just curious about how things break, there's a seat for you.</p>
+        <ul class="tracks">
+          <li class="track"><i class="fas fa-microphone" aria-hidden="true"></i><span>Talks &amp; lightning talks</span></li>
+          <li class="track"><i class="fas fa-flask" aria-hidden="true"></i><span>Interactive workshops</span></li>
+          <li class="track"><i class="fas fa-key" aria-hidden="true"></i><span>Lockpicking village</span></li>
+          <li class="track"><i class="fas fa-flag" aria-hidden="true"></i><span>Capture the flag</span></li>
+          <li class="track"><i class="fas fa-landmark" aria-hidden="true"></i><span>Policy &amp; government</span></li>
+          <li class="track"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Career &amp; student track</span></li>
+        </ul>
+        <p class="note">Programming is still being planned. Final sessions will be announced as they're confirmed.</p>
+      </div>
+    </section>
+
+    <section id="involved" class="section section-alt" aria-labelledby="involved-title">
+      <div class="wrap">
+        <p class="kicker">Get involved</p>
+        <h2 id="involved-title">Four ways to take part</h2>
+        <p class="section-lede">Pick one or more. The sign up form only asks what's relevant to your choices.</p>
+        <div class="cards">
+          <article class="card">
+            <i class="fas fa-ticket" aria-hidden="true"></i>
+            <h3>Attend</h3>
+            <p>Get notified when tickets open and help us plan for headcount.</p>
+            <a href="#signup" data-role-link="attend">Register to attend <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            <h3>Sponsor</h3>
+            <p>Support the local security community and meet Sacramento's talent.</p>
+            <a href="#signup" data-role-link="sponsor">Request sponsor prospectus <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <i class="fas fa-microphone" aria-hidden="true"></i>
+            <h3>Speak</h3>
+            <p>Share research, lessons learned, or tools. New speakers are very welcome.</p>
+            <a href="#signup" data-role-link="speak">Submit a talk <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="card">
+            <i class="fas fa-flask" aria-hidden="true"></i>
+            <h3>Workshop or Village</h3>
+            <p>Run an interactive workshop or host a village for the day.</p>
+            <a href="#signup" data-role-link="workshop">Propose a workshop or village <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsors" class="section" aria-labelledby="sponsors-title">
+      <div class="wrap sponsors">
+        <div>
+          <p class="kicker">Sponsors</p>
+          <h2 id="sponsors-title">Partner with Sacramento Cyber Con</h2>
+          <p class="section-lede">Sponsorship tiers are being finalized. Sponsors reach local security professionals, students, and public sector teams while supporting a grassroots event.</p>
+          <a class="btn btn-purple" href="#signup" data-role-link="sponsor">Request the prospectus</a>
+        </div>
+        <ul class="sponsor-slots" aria-label="Sponsor placements">
+          <li>Your logo here</li>
+          <li>Your logo here</li>
+          <li>Your logo here</li>
+          <li>Your logo here</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="signup" class="section section-alt" aria-labelledby="signup-title">
+      <div class="wrap form-wrap">
+        <div class="form-intro">
+          <p class="kicker">Sign up</p>
+          <h2 id="signup-title">Register your interest</h2>
+          <p>Choose one or more options and the form will ask only what's relevant. We'll follow up by email as details are confirmed.</p>
+          <p>Fields marked <strong>(required)</strong> must be filled in.</p>
+        </div>
+
+        <form id="signup-form" class="form" novalidate>
+          <p id="demo-banner" class="demo-banner" hidden>
+            <i class="fas fa-flask" aria-hidden="true"></i> Demo mode: no Sheet endpoint is configured, so submissions are only logged to the browser console.
+          </p>
+
+          <!-- Honeypot: hidden from people and screen readers; bots fill it in -->
+          <div class="hp" aria-hidden="true">
+            <label for="website_url">Leave this empty</label>
+            <input id="website_url" type="text" name="website_url" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset class="group">
+            <legend>I'm interested in <span class="req">(choose at least one)</span></legend>
+            <div class="roles">
+              <label class="role"><input type="checkbox" name="roles" value="attend"><i class="fas fa-ticket" aria-hidden="true"></i><span>Attending</span><i class="fas fa-check tick" aria-hidden="true"></i></label>
+              <label class="role"><input type="checkbox" name="roles" value="sponsor"><i class="fas fa-handshake" aria-hidden="true"></i><span>Sponsoring</span><i class="fas fa-check tick" aria-hidden="true"></i></label>
+              <label class="role"><input type="checkbox" name="roles" value="speak"><i class="fas fa-microphone" aria-hidden="true"></i><span>Speaking</span><i class="fas fa-check tick" aria-hidden="true"></i></label>
+              <label class="role"><input type="checkbox" name="roles" value="workshop"><i class="fas fa-flask" aria-hidden="true"></i><span>Workshop / Village</span><i class="fas fa-check tick" aria-hidden="true"></i></label>
+            </div>
+            <p class="field-error" id="roles-error" role="alert" hidden>Choose at least one option.</p>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>About you</legend>
+            <div class="row">
+              <div class="field"><label for="f-name">Name <span class="req">(required)</span></label><input id="f-name" type="text" name="name" required autocomplete="name" maxlength="200"></div>
+              <div class="field"><label for="f-email">Email <span class="req">(required)</span></label><input id="f-email" type="email" name="email" required autocomplete="email" maxlength="200"></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="f-org">Organization or school</label><input id="f-org" type="text" name="organization" autocomplete="organization" maxlength="200"></div>
+              <div class="field"><label for="f-handle">Handle</label><input id="f-handle" type="text" name="handle" autocomplete="nickname" maxlength="100"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="group role-section" data-role="attend" hidden disabled>
+            <legend>Attending</legend>
+            <div class="row">
+              <div class="field">
+                <label for="f-attend-type">I'd describe myself as</label>
+                <select id="f-attend-type" name="attend_type">
+                  <option value="">Choose one</option>
+                  <option>Student</option>
+                  <option>Security professional</option>
+                  <option>IT / Dev (not security)</option>
+                  <option>Hobbyist / Curious</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-group">Group size, including you</label><input id="f-group" type="number" name="attend_group_size" min="1" max="50" value="1" inputmode="numeric"></div>
+            </div>
+            <div class="check"><input id="f-volunteer" type="checkbox" name="attend_volunteer" value="yes"><label for="f-volunteer">I'd be interested in volunteering</label></div>
+          </fieldset>
+
+          <fieldset class="group role-section" data-role="sponsor" hidden disabled>
+            <legend>Sponsoring</legend>
+            <div class="row">
+              <div class="field"><label for="f-company">Company <span class="req">(required)</span></label><input id="f-company" type="text" name="sponsor_company" required autocomplete="organization" maxlength="200"></div>
+              <div class="field"><label for="f-website">Website</label><input id="f-website" type="url" name="sponsor_website" autocomplete="url" maxlength="300" aria-describedby="f-website-hint"><p class="hint" id="f-website-hint">Include https://</p></div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="f-tier">Level of interest</label>
+                <select id="f-tier" name="sponsor_tier">
+                  <option value="">Not sure yet</option>
+                  <option>Community</option>
+                  <option>Bronze</option>
+                  <option>Silver</option>
+                  <option>Gold</option>
+                  <option>Donated goods or services (venue, food, swag, etc.)</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="sponsor_phone" autocomplete="tel" maxlength="40"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="group role-section" data-role="speak" hidden disabled>
+            <legend>Speaking</legend>
+            <div class="row">
+              <div class="field"><label for="f-talk-title">Talk title <span class="req">(required)</span></label><input id="f-talk-title" type="text" name="speak_title" required maxlength="200"></div>
+              <div class="field">
+                <label for="f-format">Format</label>
+                <select id="f-format" name="speak_length">
+                  <option>Full talk (~45 min)</option>
+                  <option>Short talk (~20 min)</option>
+                  <option>Lightning talk (5 min)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="f-abstract">Abstract <span class="req">(required)</span></label><textarea id="f-abstract" name="speak_abstract" rows="5" required maxlength="3000" aria-describedby="f-abstract-hint"></textarea><p class="hint" id="f-abstract-hint">What will attendees learn? A short paragraph is plenty.</p></div>
+            <div class="row">
+              <div class="field">
+                <label for="f-level">Audience level</label>
+                <select id="f-level" name="speak_level">
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-links">Previous talks or links</label><input id="f-links" type="text" name="speak_links" maxlength="500"></div>
+            </div>
+            <div class="check"><input id="f-first" type="checkbox" name="speak_first_time" value="yes"><label for="f-first">This would be my first talk</label></div>
+          </fieldset>
+
+          <fieldset class="group role-section" data-role="workshop" hidden disabled>
+            <legend>Workshop or village</legend>
+            <div class="row">
+              <div class="field">
+                <label for="f-wtype">Type</label>
+                <select id="f-wtype" name="workshop_type">
+                  <option>Workshop</option>
+                  <option>Village</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-wtitle">Name or title <span class="req">(required)</span></label><input id="f-wtitle" type="text" name="workshop_title" required maxlength="200"></div>
+            </div>
+            <div class="field"><label for="f-wdesc">Description <span class="req">(required)</span></label><textarea id="f-wdesc" name="workshop_description" rows="4" required maxlength="3000"></textarea></div>
+            <div class="row">
+              <div class="field"><label for="f-capacity">Expected capacity (people)</label><input id="f-capacity" type="number" name="workshop_capacity" min="1" max="1000" inputmode="numeric"></div>
+              <div class="field">
+                <label for="f-duration">Duration</label>
+                <select id="f-duration" name="workshop_duration">
+                  <option>1 hour</option>
+                  <option>2 hours</option>
+                  <option>Half day</option>
+                  <option>Full day</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="f-needs">Space, power, or network needs</label><input id="f-needs" type="text" name="workshop_needs" maxlength="500" aria-describedby="f-needs-hint"><p class="hint" id="f-needs-hint">For example: 6 tables, power strips, isolated network.</p></div>
+          </fieldset>
+
+          <fieldset class="group">
+            <legend>Anything else?</legend>
+            <div class="field">
+              <label for="f-referral">How did you hear about us?</label>
+              <select id="f-referral" name="referral">
+                <option value="">Choose one</option>
+                <option>DC916 meeting / Discord</option>
+                <option>Social media</option>
+                <option>Friend or coworker</option>
+                <option>School / club</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-comments">Comments, questions, or accommodation requests</label><textarea id="f-comments" name="comments" rows="3" maxlength="2000"></textarea></div>
+            <div class="check"><input id="f-updates" type="checkbox" name="updates_opt_in" value="yes" checked><label for="f-updates">Email me conference updates</label></div>
+            <div class="check"><input id="f-coc" type="checkbox" name="coc_agree" value="yes" required><label for="f-coc">I agree to follow the <a href="https://dc916.com/CoC" target="_blank" rel="noopener">Code of Conduct<span class="visually-hidden"> (opens in a new tab)</span></a> <span class="req">(required)</span></label></div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-purple submit">Submit</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <div>
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-title">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>When and where is it?</summary>
+            <p>Date and venue are still being finalized. Register your interest and we'll email you as soon as they're confirmed.</p>
+          </details>
+          <details>
+            <summary>How much will tickets cost?</summary>
+            <p>We aim to keep it affordable, with discounted student tickets. Pricing will be announced with registration.</p>
+          </details>
+          <details>
+            <summary>I've never given a talk. Can I still apply?</summary>
+            <p>Absolutely. Check "This would be my first talk" and we'll pair you with a mentor to help you prepare.</p>
+          </details>
+          <details>
+            <summary>Will the event be accessible?</summary>
+            <p>We're committed to an accessible event. Venue accessibility details will be posted once the venue is confirmed. If you need an accommodation, let us know in the comments field of the sign up form and we'll follow up with you.</p>
+          </details>
+          <details>
+            <summary>What happens to my information?</summary>
+            <p>It's stored in a private spreadsheet only the organizers can access, and used only to plan the conference and contact you about it. We never sell or share it.</p>
+          </details>
+          <details>
+            <summary>Is there a Code of Conduct?</summary>
+            <p>Yes. The conference follows the <a href="https://dc916.com/CoC" target="_blank" rel="noopener">DC916 Code of Conduct<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="brand"><span class="mark" aria-hidden="true">SCC</span><span>Sacramento Cyber Con</span></span>
+      <span>Brought to you by <a href="https://dc916.com" target="_blank" rel="noopener">DC916 | Cybersecurity Sacramento<span class="visually-hidden"> (opens in a new tab)</span></a></span>
+    </div>
+  </footer>
+
+  <script src="../config.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
